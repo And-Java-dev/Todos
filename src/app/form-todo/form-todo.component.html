@@ -1,0 +1,16 @@
+<div>
+  <input type="text"
+  placeholder="Add todo title..."
+         [(ngModel)]="title"
+  >
+  <input type="file"
+         (change)="todosService.onFileSelected($event)"
+         name="file"
+         [(ngModel)]="imageName"
+  >
+<!--  <button (click)="addTodoImage()" >Add Image</button>-->
+  <button (click)="addTodo()"
+  (keydown.enter)="addTodo()"
+  >Add Todo</button>
+
+</div>
